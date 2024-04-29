@@ -15,24 +15,27 @@ private:
     std::vector <Commande*> commandeNonAffectee;
 
 public:
-    Jour(std::vector <Commande*> newVect1,std::vector <Commande*> newVect2): id(jourSuivant++) , commandeAffectee(newVect1) , commandeNonAffectee(newVect2) {} ;
+    Jour() : id(jourSuivant++) {};
 
-    void ajouterCommande( Commande * commande);
+    void ajouterCommande( Commande* commande);
 
     void affectationCommande ();
+
+};
 
 
 class Calendrier{
 
-private:
-    std::vector <Jour*> cal;
+
 
 public:
-    Calendrier(std::vector <Jour*> newVect) :  cal(newVect) {};
+    std::vector <Jour*> vectCalendrier;
+
+    Calendrier() ;
 
     ~Calendrier();
 
-};
+    void ajouterNJour(int n);
 
 
 };

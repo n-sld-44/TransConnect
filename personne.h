@@ -12,7 +12,7 @@ protected:
     static int         nextSs;
 
     const int          numSecu;
-    const std::string        nom;
+    const std::string  nom;
     const std::string  prenom;
     const int          dateNaissance;
     int                numeroTel;
