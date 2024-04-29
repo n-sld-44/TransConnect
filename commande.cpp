@@ -15,11 +15,13 @@ void Commande::attribuerChauffeur(Chauffeur *C){
 }
 
 void Commande::ajouterAuCalendrier(){
-    Jour* ptr = nullptr;
+
 
     if (this->calendrier->vectCalendrier.size()<=this->jourLivraison){
-        this->calendrier->ajouterNJour(this->jourLivraison-this->calendrier->vectCalendrier.size());
+        this->calendrier->ajouterNJour(this->jourLivraison-this->calendrier->vectCalendrier.size()); // Ajout des jours entre le dernier jour enregistré et le jour de la commande
     }
+
+    this->calendrier->vectCalendrier[this->jourLivraison]->ajouterCommande(this);
 
 
 
