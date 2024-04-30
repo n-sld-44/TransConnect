@@ -6,6 +6,7 @@ void Jour::ajouterCommande(Commande * commande){
     commandeNonAffectee.push_back(commande);
 }
 
+//void Jour::affectationCommande()
 
 
 void Calendrier::ajouterNJour(int n){
